@@ -1,0 +1,56 @@
+# Scopes: this = selection | from = country with menu open
+# Literally does nothing, just for displaying variables
+CAC_variable_container = {
+	potential = { is_same_value = from }
+
+	allow = { hidden_trigger = { always = no } }
+}
+
+# Warns you that going above ascension tier 19 is incredibly unbalanced
+CAC_warning= {
+	potential = {
+		is_same_value = from
+		event_target:global_event_country = { check_variable = { which = CAC_variable value > 19 } }
+	}
+
+	allow = {
+		hidden_trigger = { always = no }
+		custom_tooltip = CAC_tier_20_warning
+	}
+}
+
+# increments CAC_variable by +1
+CAC_cap_plus_one = {
+	potential = { is_same_value = from }
+
+	allow = { hidden_trigger = { always = yes } }
+
+	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = 1 } } } }
+}
+
+# increments CAC_variable by +10
+CAC_cap_plus_ten = {
+	potential = { is_same_value = from }
+
+	allow = { hidden_trigger = { always = yes } }
+
+	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = 10 } } } }
+}
+
+# increments CAC_variable by -1
+CAC_cap_minus_one = {
+	potential = { is_same_value = from }
+
+	allow = { hidden_trigger = { always = yes } }
+
+	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = -1 } } } }
+}
+
+# increments CAC_variable by -10
+CAC_cap_minus_ten = {
+	potential = { is_same_value = from }
+
+	allow = { hidden_trigger = { always = yes } }
+
+	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = -10 } } } }
+}

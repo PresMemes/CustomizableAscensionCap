@@ -1,0 +1,2 @@
+#PM: Overwrite this to whatever you want the default to be in a SEPERATE MOD
+@CAC_default_cap = 10

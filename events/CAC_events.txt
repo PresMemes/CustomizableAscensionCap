@@ -1,0 +1,102 @@
+namespace = PM_CAC
+
+# Basic init event
+event = {
+	id = PM_CAC.1000
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = PM_CAC_Installed
+		event_target:global_event_country = {
+			set_variable = {
+				which = CAC_variable
+				value = @CAC_default_cap
+			}
+		}
+	}
+}
+
+# Find host
+country_event = {
+	id = PM_CAC.1001
+
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = { set_country_flag = PM_CAC_host }
+}
+
+# If any playable country has >= 3 ascension perks (default starting point in 00_defines), fire an event for every playable country
+# on_yearly_pulse
+event = {
+	id = PM_CAC.1002
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { any_playable_country = { num_ascension_perks >= 3 } }
+
+	immediate = {
+		every_playable_country = {
+			country_event = {
+				id = PM_CAC.1003
+				days = 21
+				random = 7 #PM: Hopefully improve performance by delaying when planets are iterated
+			}
+		}
+	}
+}
+
+# Go through every owned planet with > CAC_variable ascension levels and set them to CAC_variable
+country_event = {
+	id = PM_CAC.1003
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_planet = {
+			limit = { has_planetary_ascension_tier > event_target:global_event_country.CAC_variable }
+			set_planetary_ascension_tier = event_target:global_event_country.CAC_variable
+		}
+	}
+}
+
+# DMM
+event = {
+	id = PM_CAC.1100
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = PM_CAC_Installed
+		dmm_register_mod = { # Shut CWTools
+			DMM_NAME = CAC_header_text
+			DMM_FLAG = PM_CAC_Installed
+		}
+	}
+}
+
+# Option menu w/ custom GUI
+# on_press_begin, or DMM. Host only
+country_event = {
+	id = PM_CAC.1
+	title = PM_CAC.1.title
+	desc = PM_CAC.1.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = "CAC_window"
+
+	trigger = { has_country_flag = PM_CAC_host }
+
+	option = {
+		name = OK
+	}
+}

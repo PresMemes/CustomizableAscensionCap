@@ -1,0 +1,41 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		PM_CAC.1000
+		PM_CAC.1100
+	}
+}
+
+on_game_start_country = {
+	events = {
+		PM_CAC.1001
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		PM_CAC.1002
+	}
+}
+
+# Triggers when pressing begin in the intro window
+# This = country to press begin
+on_press_begin = {
+	events = {
+		PM_CAC.1
+	}
+}
+
+
+on_single_player_save_game_load = {
+	events = {
+		PM_CAC.1100
+	}
+}
+
+dmm_mod_selected = {
+	events = {
+		PM_CAC.1
+	}
+}
