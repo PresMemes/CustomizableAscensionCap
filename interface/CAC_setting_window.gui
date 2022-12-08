@@ -54,6 +54,18 @@ guiTypes = {
 			orientation = CENTER_UP
 		}
 
+		instantTextBoxType = {
+			name = "CAC_ATC"
+			font = "cg_16b"
+			text = "CAC_ATC_text"
+			position = { x = -255 y = 40 }
+			maxWidth = 520
+			maxHeight = 130
+			format = center
+			scrollbartype = "standardtext_slider"
+			orientation = CENTER_UP
+		}
+
 		effectButtonType = {
 			name = "CAC_variable_container"
 			quadTextureSprite = GFX_tiled_window_transparent
@@ -82,7 +94,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "CAC_addition_container"
-			position = { x = -37 y = 65 }
+			position = { x = -22 y = 65 }
 			size = { width = 200 height = 200 }
 			moveable = no
 			orientation = CENTER_UP
@@ -112,7 +124,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "CAC_subtraction_container"
-			position = { x = -200 y = 65 }
+			position = { x = -215 y = 65 }
 			size = { width = 200 height = 200 }
 			moveable = no
 			orientation = CENTER_UP

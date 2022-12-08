@@ -4,6 +4,7 @@
  CAC_header_text:0 "Customizable Ascension Cap"
  PM_CAC.1.desc:0 "This mod works by checking if any playable country has at least §P3 Ascension Perks§!. If the previous is true, fire an event for every playable country that sets every planet with an §YAscension Tier§! above the cap to the cap.\n\n\nTo reopen this menu mid-game, either open console and enter §Eevent PM_CAC.1§! with nothing selected OR use §MDynamic Mod Menu§!."
 
+ CAC_ATC_text:0 "Ascension Tier Cap"
  CAC_variable_text:0 "§H[global_event_country.CAC_variable]§!"
  CAC_plus_one_text:0 "+1"
  CAC_plus_ten_text:0 "+10"
