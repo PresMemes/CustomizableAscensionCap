@@ -37,7 +37,7 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { any_playable_country = { num_ascension_perks >= 3 } }
+	trigger = { any_playable_country = { num_ascension_perks >= @CAC_num_ascension_perks } }
 
 	immediate = {
 		every_playable_country = {

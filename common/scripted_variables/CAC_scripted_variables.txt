@@ -1,2 +1,3 @@
-#PM: Overwrite this to whatever you want the default to be in a SEPERATE MOD
+#PM: Overwrite these to whatever you want the default to be in a SEPERATE MOD
 @CAC_default_cap = 10
+@CAC_num_ascension_perks = 3
