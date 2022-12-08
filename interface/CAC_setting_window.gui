@@ -72,7 +72,7 @@ guiTypes = {
 			effect = CAC_variable_container
 			font = "malgun_goth_24"
 			text = "CAC_variable_text"
-			position = { x = -18 y = 65 }
+			position = { x = -18 y = 67 }
 			orientation = CENTER_UP
 			size = { x = 40 y = 20 }
 			no_clicksound = yes
@@ -85,11 +85,20 @@ guiTypes = {
 			effect = CAC_warning
 			font = "malgun_goth_24"
 			text = "CAC_warning_text"
-			position = { x = -50 y = 65 }
+			position = { x = -50 y = 67 }
 			orientation = CENTER_UP
 			size = { x = 100 y = 20 }
 			no_clicksound = yes
 			oversound = no_sound
+		}
+
+		effectButtonType = {
+			name = "CAC_lock_container"
+			quadTextureSprite = GFX_CAC_crisis_lock_icon
+			effect = CAC_lock_cap
+			position = { x = -270 y = 63 }
+			orientation = CENTER_UP
+			size = { x = 100 y = 20 }
 		}
 
 		containerWindowType = {

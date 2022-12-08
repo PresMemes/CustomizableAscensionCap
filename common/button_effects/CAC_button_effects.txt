@@ -23,7 +23,12 @@ CAC_warning= {
 CAC_cap_plus_one = {
 	potential = { is_same_value = from }
 
-	allow = { hidden_trigger = { always = yes } }
+	allow = {
+		custom_tooltip = {
+			fail_text = CAC_locked_you_dummy
+			hidden_trigger = { NOT = { has_global_flag = CAC_locked_flag } }
+		}
+	}
 
 	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = 1 } } } }
 }
@@ -32,8 +37,12 @@ CAC_cap_plus_one = {
 CAC_cap_plus_ten = {
 	potential = { is_same_value = from }
 
-	allow = { hidden_trigger = { always = yes } }
-
+	allow = {
+		custom_tooltip = {
+			fail_text = CAC_locked_you_dummy
+			hidden_trigger = { NOT = { has_global_flag = CAC_locked_flag } }
+		}
+	}
 	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = 10 } } } }
 }
 
@@ -41,8 +50,12 @@ CAC_cap_plus_ten = {
 CAC_cap_minus_one = {
 	potential = { is_same_value = from }
 
-	allow = { hidden_trigger = { always = yes } }
-
+	allow = {
+		custom_tooltip = {
+			fail_text = CAC_locked_you_dummy
+			hidden_trigger = { NOT = { has_global_flag = CAC_locked_flag } }
+		}
+	}
 	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = -1 } } } }
 }
 
@@ -50,7 +63,25 @@ CAC_cap_minus_one = {
 CAC_cap_minus_ten = {
 	potential = { is_same_value = from }
 
-	allow = { hidden_trigger = { always = yes } }
-
+	allow = {
+		custom_tooltip = {
+			fail_text = CAC_locked_you_dummy
+			hidden_trigger = { NOT = { has_global_flag = CAC_locked_flag } }
+		}
+	}
 	effect = { hidden_effect = { event_target:global_event_country = { change_variable = { which = CAC_variable value = -10 } } } }
+}
+
+# Lock ATC
+CAC_lock_cap = {
+	potential = { is_same_value = from }
+
+	allow = {
+		custom_tooltip = {
+			fail_text = CAC_locked_you_dummy
+			hidden_trigger = { NOT = { has_global_flag = CAC_locked_flag } }
+		}
+	}
+
+	effect = { hidden_effect = { set_global_flag = CAC_locked_flag } }
 }

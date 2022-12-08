@@ -2,7 +2,7 @@
 
  PM_CAC.1.title:0 ""
  CAC_header_text:0 "Customizable Ascension Cap"
- PM_CAC.1.desc:0 "This mod works by checking if any playable country has at least §P3 Ascension Perks§!. If the previous is true, fire an event for every playable country that sets every planet with an §YAscension Tier§! above the cap to the cap.\n\n\nTo reopen this menu mid-game, either open console and enter §Eevent PM_CAC.1§! with nothing selected OR use §MDynamic Mod Menu§!."
+ PM_CAC.1.desc:0 "§HThe Lock Button:§! $CAC_lock_tooltip$\n\nTo reopen this menu mid-game, either open console and enter §Eevent PM_CAC.1§! with nothing selected OR use §MDynamic Mod Menu§!."
 
  CAC_ATC_text:0 "Ascension Tier Cap"
  CAC_variable_text:0 "§H[global_event_country.CAC_variable]§!"
@@ -12,3 +12,6 @@
  CAC_minus_ten_text:0 "-10"
  CAC_warning_text:0 "£community_in_breach£       £community_in_breach£"
  CAC_tier_20_warning:0 "Going above §YAscension Tier 19§! is not reccomended due to §Rside-effects§!, such as negative £empire_sprawl£ §B$EMPIRE_SIZE$§!, free §HEdicts§!, and more!"
+
+ CAC_lock_tooltip:0 "This will prevent you from changing the §Y$CAC_ATC_text$§! §Rfor the rest of the game!§!\n\nThe only way to undo this is to reload a save from before you clicked this button."
+ CAC_locked_you_dummy:0 "This cannot be changed since you pressed the §HLock Button!§!"
