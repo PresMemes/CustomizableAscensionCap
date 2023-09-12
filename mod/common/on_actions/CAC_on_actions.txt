@@ -27,7 +27,6 @@ on_press_begin = {
 	}
 }
 
-
 on_single_player_save_game_load = {
 	events = {
 		PM_CAC.1100
