@@ -3,5 +3,5 @@ tags={
 	"Fixes"
 }
 name="Customizable Ascension Cap (3.12.X)"
-supported_version="v3.12.*"
+supported_version="3.12.*"
 remote_file_id="2898917850"
