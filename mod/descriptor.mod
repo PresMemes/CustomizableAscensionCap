@@ -2,6 +2,6 @@ version="1.0.0"
 tags={
 	"Fixes"
 }
-name="Customizable Ascension Cap (3.13.X)"
-supported_version="v3.13.*"
+name="Customizable Ascension Cap (3.14.X)"
+supported_version="v3.14.*"
 remote_file_id="2898917850"
