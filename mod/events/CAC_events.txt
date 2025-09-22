@@ -34,25 +34,25 @@ country_event = {
 # NO LONGER USED, SEE PM_CAC.1500
 # If any playable country has > CAC_variable ascension tiers, fire a delayed event
 # on_yearly_pulse
-event = {
-	id = PM_CAC.1002
-
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = { any_playable_country = { num_planetary_ascension_tiers > event_target:global_event_country.CAC_variable } }
-
-	immediate = {
-		every_playable_country = {
-			limit = { num_planetary_ascension_tiers > event_target:global_event_country.CAC_variable }
-			country_event = {
-				id = PM_CAC.1003
-				days = 21
-				random = 7 # Hopefully improve performance by delaying when planets are iterated
-			}
-		}
-	}
-}
+# event = {
+# 	id = PM_CAC.1002
+#
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	trigger = { any_playable_country = { num_planetary_ascension_tiers > event_target:global_event_country.CAC_variable } }
+#
+# 	immediate = {
+# 		every_playable_country = {
+# 			limit = { num_planetary_ascension_tiers > event_target:global_event_country.CAC_variable }
+# 			country_event = {
+# 				id = PM_CAC.1003
+# 				days = 21
+# 				random = 7 # Hopefully improve performance by delaying when planets are iterated
+# 			}
+# 		}
+# 	}
+# }
 
 event = {
 	id = PM_CAC.1500
